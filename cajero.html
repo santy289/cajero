@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>
+            cajero automatico
+        </title>
+    </head>
+    <style>
+   body
+      {
+        background-color: #000000;
+      }
+      h1
+      {
+        color: #e0e0e0;
+        font-family: inherit;
+      }
+      .restante
+      {
+    	text-align:justify;
+	    color:rgba(255, 255, 255, 0.877);
+	    font-family: sans-serif;
+      }
+      .Contenidos
+      {
+        padding-left: 300px;
+        position: absolute;
+        top: 300px;
+      }
+      .boton
+      {
+        margin-left: 90px;
+        position: absolute;    
+        font-family: sans-serif;
+        color: #fdfdffec;
+        font-size: 18px;
+        font-weight: 400;
+        background-color: #aaa7a7bb;
+      }
+      .display
+      {
+        position: absolute;
+        padding-left: 400px;
+        text-align: center;
+        top: 550px;
+        font-family: sans-serif;
+        font-size: 20px;
+        color: white;
+      }
+      .recarga
+      {
+        position: absolute;
+        padding-left: 10px;
+        font-family: monospace;
+        font-size: 20px;
+        top: 100px;
+        color: white;
+      }
+      .resultado
+      {
+        position: absolute;
+        padding-left: 900px;
+        font-family: monospace;
+        font-size: 20px;
+        top: 80px;
+        color: white;
+      }
+      .fondo
+      {
+        
+        position: relative;
+        margin: auto;
+        width: 1060px;
+      }
+      
+    </style>
+    <body>
+        <audio src= "tecla.mp3" id="tecla_id"></audio>
+        <audio src= "error.mp3" id="alerta_id"></audio>
+        <audio src= "retiro.mp3" id="entrega_id"></audio>
+
+        <div class = "fondo">
+        <img class="fondoImg"src="fondo.jpg"></img>
+        <div class = resultado>
+            <p class = money id = "resultado"></p>
+            </div>
+        <div class = "recarga">
+        <input class = "boton" type="button" value = "recargar cajero" id="recarga"/><br/>
+        </div>
+        <div class="Contenidos">
+        <p class = "datos">
+            <h1><strong>Ingrese el monto deseado</strong></h1>
+            <br>
+            <input type="number" id= "dinero"/><br/> 
+            <p class = "restante" id = "restante"></p>        
+        </p>
+        </div>
+    
+        <div class="display">
+        </p>
+        <div>
+            <input class="boton" type="button" value = "Realizar transacción" id="boton"/>
+            </div>
+        </div>
+        </div>
+       
+        <script src = "cajero.js"></script>
+    </body>
+</html>
+
